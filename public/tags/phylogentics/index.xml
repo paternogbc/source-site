@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>phylogentics on Gustavo Paterno</title>
+    <link>/tags/phylogentics/</link>
+    <description>Recent content in phylogentics on Gustavo Paterno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
+    <lastBuildDate>Tue, 01 Mar 2016 00:00:00 -0300</lastBuildDate>
+    
+	<atom:link href="/tags/phylogentics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Background noise as a selective pressure: stream-breeding anurans call at higher frequencies</title>
+      <link>/publication/2016_rhor-et-al_anura-call/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/publication/2016_rhor-et-al_anura-call/</guid>
+      <description>Citation Röhr, D. L., Paterno, G. B., Camurugi, F., Juncá, F. A., &amp;amp; Garda, A. A. (2016). Background noise as a selective pressure: stream-breeding anurans call at higher frequencies. Organisms Diversity and Evolution, 16(1), 269–273. https://doi.org/10.1007/s13127-015-0256-0</description>
+    </item>
+    
+  </channel>
+</rss>
