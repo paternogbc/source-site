@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Gustavo Paterno</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Gustavo Paterno</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 -0300</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Demo</title>
+      <link>/tags/demo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anura</title>
+      <link>/tags/anura/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/anura/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comparative methods</title>
+      <link>/tags/comparative-methods/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/tags/comparative-methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>competition</title>
+      <link>/tags/competition/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/competition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conservation</title>
+      <link>/tags/conservation/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/conservation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dplyr</title>
+      <link>/tags/dplyr/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dplyr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>evolution</title>
+      <link>/tags/evolution/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/tags/evolution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facilitation</title>
+      <link>/tags/facilitation/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/facilitation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functional ecology</title>
+      <link>/tags/functional-ecology/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0200</pubDate>
+      
+      <guid>/tags/functional-ecology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phylogenetics</title>
+      <link>/tags/phylogenetics/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      
+      <guid>/tags/phylogenetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phylogentics</title>
+      <link>/tags/phylogentics/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/phylogentics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>r</title>
+      <link>/tags/r/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>restoration ecology</title>
+      <link>/tags/restoration-ecology/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0200</pubDate>
+      
+      <guid>/tags/restoration-ecology/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
