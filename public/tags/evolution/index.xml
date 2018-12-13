@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>evolution on Gustavo Paterno</title>
-    <link>/tags/evolution/</link>
+    <link>https://paternogbc.netlify.com/tags/evolution/</link>
     <description>Recent content in evolution on Gustavo Paterno</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
     <lastBuildDate>Mon, 01 Jan 2018 00:00:00 -0200</lastBuildDate>
     
-	<atom:link href="/tags/evolution/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paternogbc.netlify.com/tags/evolution/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods</title>
-      <link>/publication/2018_mee_paterno-et-al_sensiphy/</link>
+      <link>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
-      <guid>/publication/2018_mee_paterno-et-al_sensiphy/</guid>
+      <guid>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</guid>
       <description>Citation Paterno, G. B., Penone, C., &amp;amp; Werner, G. D. A. (2018). sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods. Methods in Ecology and Evolution, 9(6), 1461–1467. https://doi.org/10.1111/2041-210X.12990</description>
     </item>
     
     <item>
       <title>Background noise as a selective pressure: stream-breeding anurans call at higher frequencies</title>
-      <link>/publication/2016_rhor-et-al_anura-call/</link>
+      <link>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
       
-      <guid>/publication/2016_rhor-et-al_anura-call/</guid>
+      <guid>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</guid>
       <description>Citation Röhr, D. L., Paterno, G. B., Camurugi, F., Juncá, F. A., &amp;amp; Garda, A. A. (2016). Background noise as a selective pressure: stream-breeding anurans call at higher frequencies. Organisms Diversity and Evolution, 16(1), 269–273. https://doi.org/10.1007/s13127-015-0256-0</description>
     </item>
     

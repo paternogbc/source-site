@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>functional ecology on Gustavo Paterno</title>
-    <link>/tags/functional-ecology/</link>
+    <link>https://paternogbc.netlify.com/tags/functional-ecology/</link>
     <description>Recent content in functional ecology on Gustavo Paterno</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
     <lastBuildDate>Tue, 01 Nov 2016 00:00:00 -0200</lastBuildDate>
     
-	<atom:link href="/tags/functional-ecology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://paternogbc.netlify.com/tags/functional-ecology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Integrating ecosystem functions into restoration ecology-recent advances and future directions</title>
-      <link>/publication/2016_kollmann_restoration-ecology/</link>
+      <link>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 -0200</pubDate>
       
-      <guid>/publication/2016_kollmann_restoration-ecology/</guid>
+      <guid>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</guid>
       <description>Citation Kollmann, J., Meyer, S. T., Bateman, R., Conradi, T., Gossner, M. M., de Souza Mendonça, M., … Weisser, W. W. (2016). Integrating ecosystem functions into restoration ecology-recent advances and future directions. Restoration Ecology, 24(6), 722–730. https://doi.org/10.1111/rec.12422</description>
     </item>
     
