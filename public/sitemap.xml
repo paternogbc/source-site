@@ -4,7 +4,15 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</loc>
+      <loc>/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/</loc>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</loc>
       <lastmod>2018-12-12T00:00:00+00:00</lastmod>
     </url>
     
@@ -12,7 +20,31 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</loc>
+      <loc>/tutorial/example/</loc>
+      <lastmod>2018-09-09T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tutorial/</loc>
+      <lastmod>2018-09-09T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/privacy/</loc>
+      <lastmod>2018-06-28T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/publication/2018_mee_paterno-et-al_sensiphy/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -20,7 +52,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/talk/example/</loc>
+      <loc>/talk/example/</loc>
       <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -28,7 +60,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/post/</loc>
+      <loc>/post/</loc>
       <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -36,7 +68,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication/</loc>
+      <loc>/publication/</loc>
       <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -44,7 +76,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/talk/</loc>
+      <loc>/talk/</loc>
       <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -52,7 +84,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</loc>
+      <loc>/publication/2016_kollmann_restoration-ecology/</loc>
       <lastmod>2016-11-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -60,7 +92,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication/2016_jvs_paterno-et-al_facilitation/</loc>
+      <loc>/publication/2016_jvs_paterno-et-al_facilitation/</loc>
       <lastmod>2016-09-01T00:00:00-03:00</lastmod>
     </url>
     
@@ -68,7 +100,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/project/external-project/</loc>
+      <loc>/project/external-project/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
     </url>
     
@@ -76,7 +108,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/project/internal-project/</loc>
+      <loc>/project/internal-project/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
     </url>
     
@@ -84,7 +116,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</loc>
+      <loc>/publication/2016_rhor-et-al_anura-call/</loc>
       <lastmod>2016-03-01T00:00:00-03:00</lastmod>
     </url>
     
@@ -92,7 +124,15 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication_types/2/</loc>
+      <loc>/publication/2016_mp_garla_shark/</loc>
+      <lastmod>2015-10-01T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/publication_types/2/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -101,7 +141,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -109,7 +149,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/deep-learning/</loc>
+      <loc>/tags/deep-learning/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -118,7 +158,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/demo/</loc>
+      <loc>/tags/demo/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -127,7 +167,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/</loc>
+      <loc>/</loc>
       <lastmod>2017-10-14T23:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -136,7 +176,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/project/</loc>
+      <loc>/project/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -145,7 +185,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -154,7 +194,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/slides/</loc>
+      <loc>/slides/</loc>
       <priority>0</priority>
     </url>
     
@@ -162,14 +202,14 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/slides/example-slides/</loc>
+      <loc>/slides/example-slides/</loc>
     </url>
     
   
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2016-04-27T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -178,7 +218,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/anura/</loc>
+      <loc>/tags/anura/</loc>
       <lastmod>2016-03-01T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -187,7 +227,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/comparative-methods/</loc>
+      <loc>/tags/comparative-methods/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -196,7 +236,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/competition/</loc>
+      <loc>/tags/competition/</loc>
       <lastmod>2016-09-01T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -205,8 +245,8 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/dplyr/</loc>
-      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+      <loc>/tags/conservation/</loc>
+      <lastmod>2015-10-01T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -214,7 +254,16 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/evolution/</loc>
+      <loc>/tags/dplyr/</loc>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/evolution/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -223,7 +272,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/facilitation/</loc>
+      <loc>/tags/facilitation/</loc>
       <lastmod>2016-09-01T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -232,7 +281,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/functional-ecology/</loc>
+      <loc>/tags/functional-ecology/</loc>
       <lastmod>2016-11-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -241,7 +290,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/phylogenetics/</loc>
+      <loc>/tags/phylogenetics/</loc>
       <lastmod>2018-01-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -250,7 +299,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/phylogentics/</loc>
+      <loc>/tags/phylogentics/</loc>
       <lastmod>2016-03-01T00:00:00-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -259,8 +308,8 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/r/</loc>
-      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+      <loc>/tags/r/</loc>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -268,7 +317,7 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/tags/restoration-ecology/</loc>
+      <loc>/tags/restoration-ecology/</loc>
       <lastmod>2016-11-01T00:00:00-02:00</lastmod>
       <priority>0</priority>
     </url>
@@ -277,8 +326,8 @@
     
     <url>
     
-      <loc>https://paternogbc.netlify.com/categories/tutorial/</loc>
-      <lastmod>2018-12-12T00:00:00+00:00</lastmod>
+      <loc>/categories/tutorial/</loc>
+      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

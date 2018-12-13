@@ -16,11 +16,11 @@
     
   
   <meta name="description" content="O pacote dplyr  &ldquo;dplyr é uma gramática para a manipulação de dados, oferecendo uma série de verbos consistentes que ajudam você a resolver os principais desafios de manipulação de dados e tabelas no R&rdquo; (https://dplyr.tidyverse.org)
- select() Neste tutorial iremos aprender a usar o verbo select() (selecionar).
-A função select() seleciona e mantém apenas as variáveis que você deseja em uma tabela de dados. Variáveis são as colunas do sua tabela no R (data.">
+ rename() Neste tutorial iremos aprender a usar o verbo rename() (renomear).
+A função renomear() modifica o nome de uma ou mais colunas de uma tabela de dados. Todas as colunas são mantidas.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/">
+  <link rel="alternate" hreflang="en-us" href="/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
 
   
 
@@ -90,7 +90,7 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/">
+  <link rel="canonical" href="/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
 
   
   
@@ -105,23 +105,23 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
   <meta property="twitter:creator" content="@paternogb">
   
   <meta property="og:site_name" content="Gustavo Paterno">
-  <meta property="og:url" content="/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/">
-  <meta property="og:title" content="Como selecionar colunas de uma tabela no R? | Gustavo Paterno">
+  <meta property="og:url" content="/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
+  <meta property="og:title" content="Como renomear colunas de uma tabela (data.frame) com o pacote dplyr? | Gustavo Paterno">
   <meta property="og:description" content="O pacote dplyr  &ldquo;dplyr é uma gramática para a manipulação de dados, oferecendo uma série de verbos consistentes que ajudam você a resolver os principais desafios de manipulação de dados e tabelas no R&rdquo; (https://dplyr.tidyverse.org)
- select() Neste tutorial iremos aprender a usar o verbo select() (selecionar).
-A função select() seleciona e mantém apenas as variáveis que você deseja em uma tabela de dados. Variáveis são as colunas do sua tabela no R (data."><meta property="og:image" content="/img/portrait.jpg">
+ rename() Neste tutorial iremos aprender a usar o verbo rename() (renomear).
+A função renomear() modifica o nome de uma ou mais colunas de uma tabela de dados. Todas as colunas são mantidas."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-12-12T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-12-13T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-12-12T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2018-12-13T00:00:00&#43;00:00">
   
 
   
 
-  <title>Como selecionar colunas de uma tabela no R? | Gustavo Paterno</title>
+  
+
+  <title>Como renomear colunas de uma tabela (data.frame) com o pacote dplyr? | Gustavo Paterno</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -314,7 +314,7 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Como selecionar colunas de uma tabela no R?</h1>
+  <h1 itemprop="name">Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?</h1>
 
   
 
@@ -332,9 +332,9 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
 
   <span class="article-date">
     
-    <meta content="2018-12-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2018-12-12 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Dec 12, 2018
+    <meta content="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Dec 13, 2018
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -344,14 +344,14 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    3 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/#disqus_thread"></a>
+  <a href="/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/#disqus_thread"></a>
   
 
   
@@ -373,35 +373,35 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Como%20selecionar%20colunas%20de%20uma%20tabela%20no%20R%3f&amp;url=%2fpost%2fdplyr_select%2fcomo-selecionar-colunas-de-uma-tabela-no-r%2f"
+         href="https://twitter.com/intent/tweet?text=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;url=%2fpost%2fdplyr_rename%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fdplyr_select%2fcomo-selecionar-colunas-de-uma-tabela-no-r%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fdplyr_rename%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fdplyr_select%2fcomo-selecionar-colunas-de-uma-tabela-no-r%2f&amp;title=Como%20selecionar%20colunas%20de%20uma%20tabela%20no%20R%3f"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fdplyr_rename%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fdplyr_select%2fcomo-selecionar-colunas-de-uma-tabela-no-r%2f&amp;title=Como%20selecionar%20colunas%20de%20uma%20tabela%20no%20R%3f"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fdplyr_rename%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Como%20selecionar%20colunas%20de%20uma%20tabela%20no%20R%3f&amp;body=%2fpost%2fdplyr_select%2fcomo-selecionar-colunas-de-uma-tabela-no-r%2f">
+         href="mailto:?subject=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;body=%2fpost%2fdplyr_rename%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -447,229 +447,131 @@ verbos consistentes que ajudam você a resolver os principais desafios de
 manipulação de dados e tabelas no R&rdquo; (<a href="https://dplyr.tidyverse.org" target="_blank">https://dplyr.tidyverse.org</a>)</p>
 </blockquote>
 
-<h2 id="select"><code>select()</code></h2>
+<h2 id="rename"><code>rename()</code></h2>
 
-<p>Neste tutorial iremos aprender a usar o verbo <code>select()</code> (selecionar).</p>
+<p>Neste tutorial iremos aprender a usar o verbo <code>rename()</code> (renomear).</p>
 
-<p>A função <code>select()</code> seleciona e mantém apenas as variáveis que você deseja em uma
-tabela de dados. Variáveis são as colunas do sua tabela no R (data.frame).</p>
+<p>A função <code>renomear()</code> modifica o nome de uma ou mais colunas de uma
+tabela de dados. Todas as colunas são mantidas.</p>
 
-<h3 id="exemplo-selecionar-algumas-variáveis-da-tabela">Exemplo: selecionar algumas variáveis da tabela</h3>
+<h2 id="forma-de-uso">Forma de uso</h2>
 
-<p>A tabela abaixo possui <strong>11 colunas</strong>!</p>
+<p>A forma de usar a função segue essa formula:</p>
 
-<pre><code class="language-r">mtcars &lt;- as_tibble(mtcars) # Para o print ficar melhor
-head(mtcars)
+<pre><code class="language-r">dados &lt;- rename(dados, new_name = old_name)
 </code></pre>
 
-<pre><code>## # A tibble: 6 x 11
-##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1  21       6   160   110  3.9   2.62  16.5     0     1     4     4
-## 2  21       6   160   110  3.9   2.88  17.0     0     1     4     4
-## 3  22.8     4   108    93  3.85  2.32  18.6     1     1     4     1
-## 4  21.4     6   258   110  3.08  3.22  19.4     1     0     3     1
-## 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
-## 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
+<p>Este comando irá modificar o nome da coluna &ldquo;old_name&rdquo; para &ldquo;new_name&rdquo;.
+Vamos ver como funciona na prática.</p>
+
+<h2 id="exemplos">Exemplos</h2>
+
+<p>A tabela abaixo possui <strong>5 colunas</strong>!</p>
+
+<pre><code class="language-r">iris &lt;- as_tibble(iris) # transformando em tibble (não é necessário)
+head(iris)
 </code></pre>
 
-<p>Suponha que você quer selecionar apenas as colunas: <code>mpg</code>, <code>cyl</code> e <code>wt</code> da
-tabela <code>mtcars</code>.</p>
-
-<p><strong>Comando usual</strong></p>
-
-<pre><code class="language-r">mtcars[, c(&quot;mpg&quot;,&quot;cyl&quot;,&quot;wt&quot;)]
+<pre><code>## # A tibble: 6 x 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+## 1          5.1         3.5          1.4         0.2 setosa 
+## 2          4.9         3            1.4         0.2 setosa 
+## 3          4.7         3.2          1.3         0.2 setosa 
+## 4          4.6         3.1          1.5         0.2 setosa 
+## 5          5           3.6          1.4         0.2 setosa 
+## 6          5.4         3.9          1.7         0.4 setosa
 </code></pre>
 
-<pre><code>## # A tibble: 32 x 3
-##      mpg   cyl    wt
-##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  2.62
-##  2  21       6  2.88
-##  3  22.8     4  2.32
-##  4  21.4     6  3.22
-##  5  18.7     8  3.44
-##  6  18.1     6  3.46
-##  7  14.3     8  3.57
-##  8  24.4     4  3.19
-##  9  22.8     4  3.15
-## 10  19.2     6  3.44
-## # ... with 22 more rows
+<p>Suponha que queremos modificar o nome da coluna &ldquo;Species&rdquo; e trocar por &ldquo;SP&rdquo;.</p>
+
+<h3 id="comando-sem-dplyr">Comando sem <code>dplyr</code></h3>
+
+<pre><code class="language-r">colnames(iris)[5] &lt;- &quot;sp&quot;
+iris
 </code></pre>
 
-<p><strong>Com <code>dplyr</code> e o verbo <code>select()</code></strong></p>
+<h3 id="comando-com-dplyr">Comando com <code>dplyr</code></h3>
 
-<pre><code class="language-r">select(mtcars, mpg, cyl, wt)
+<pre><code class="language-r">iris &lt;- rename(iris, SP = Species)
+iris
 </code></pre>
 
-<pre><code>## # A tibble: 32 x 3
-##      mpg   cyl    wt
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  2.62
-##  2  21       6  2.88
-##  3  22.8     4  2.32
-##  4  21.4     6  3.22
-##  5  18.7     8  3.44
-##  6  18.1     6  3.46
-##  7  14.3     8  3.57
-##  8  24.4     4  3.19
-##  9  22.8     4  3.15
-## 10  19.2     6  3.44
-## # ... with 22 more rows
+<pre><code>## # A tibble: 150 x 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width SP    
+##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt; 
+##  1          5.1         3.5          1.4         0.2 setosa
+##  2          4.9         3            1.4         0.2 setosa
+##  3          4.7         3.2          1.3         0.2 setosa
+##  4          4.6         3.1          1.5         0.2 setosa
+##  5          5           3.6          1.4         0.2 setosa
+##  6          5.4         3.9          1.7         0.4 setosa
+##  7          4.6         3.4          1.4         0.3 setosa
+##  8          5           3.4          1.5         0.2 setosa
+##  9          4.4         2.9          1.4         0.2 setosa
+## 10          4.9         3.1          1.5         0.1 setosa
+## # ... with 140 more rows
 </code></pre>
 
-<p>A principal vantagem do uso da função <code>select()</code> é que você não precisa colocar
-o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fácil e rápido.</p>
+<p>Agora suponha que queremos modificar o nome das colunas &ldquo;Sepal.Length&rdquo; e &ldquo;Sepal.Width para &ldquo;sepL&rdquo;
+e &ldquo;sepW&rdquo;.</p>
 
-<h3 id="excluir-colunas">Excluir colunas</h3>
-
-<p>Para excluir colinas de uma tabela e manter todas as outras, utilize o sinal
-<code>-</code> na frente do nome da coluna.</p>
-
-<pre><code class="language-r">select(mtcars, -mpg, -cyl, -wt)
+<pre><code class="language-r">iris &lt;- rename(iris, sepL = Sepal.Length, sepW = Sepal.Width)
+iris
 </code></pre>
 
-<pre><code>## # A tibble: 32 x 8
-##     disp    hp  drat  qsec    vs    am  gear  carb
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  160    110  3.9   16.5     0     1     4     4
-##  2  160    110  3.9   17.0     0     1     4     4
-##  3  108     93  3.85  18.6     1     1     4     1
-##  4  258    110  3.08  19.4     1     0     3     1
-##  5  360    175  3.15  17.0     0     0     3     2
-##  6  225    105  2.76  20.2     1     0     3     1
-##  7  360    245  3.21  15.8     0     0     3     4
-##  8  147.    62  3.69  20       1     0     4     2
-##  9  141.    95  3.92  22.9     1     0     4     2
-## 10  168.   123  3.92  18.3     1     0     4     4
-## # ... with 22 more rows
+<pre><code>## # A tibble: 150 x 5
+##     sepL  sepW Petal.Length Petal.Width SP    
+##    &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt; 
+##  1   5.1   3.5          1.4         0.2 setosa
+##  2   4.9   3            1.4         0.2 setosa
+##  3   4.7   3.2          1.3         0.2 setosa
+##  4   4.6   3.1          1.5         0.2 setosa
+##  5   5     3.6          1.4         0.2 setosa
+##  6   5.4   3.9          1.7         0.4 setosa
+##  7   4.6   3.4          1.4         0.3 setosa
+##  8   5     3.4          1.5         0.2 setosa
+##  9   4.4   2.9          1.4         0.2 setosa
+## 10   4.9   3.1          1.5         0.1 setosa
+## # ... with 140 more rows
 </code></pre>
 
-<h3 id="selecionar-colunas-por-nome">Selecionar colunas por nome</h3>
+<p>Agora suponha que queremos modificar o nome das colunas &ldquo;Peal.Length&rdquo; e &ldquo;Peal.Width para &ldquo;petL&rdquo;
+e &ldquo;petW&rdquo;.</p>
 
-<p>As funções <code>starts_with()</code>, <code>ends_with()</code> e <code>contains()</code> podem ser utilizadas em conjunto com
-<code>select()</code> para selecionar apenas as colunas que começam ou terminam com um determinado padrão.</p>
-
-<ol>
-<li>Seleciona colunas que começam com a letra &ldquo;m&rdquo;.</li>
-</ol>
-
-<pre><code class="language-r">select(mtcars, starts_with(&quot;m&quot;)) 
+<pre><code class="language-r">iris &lt;- rename(iris, petL = Petal.Length, petW = Petal.Width)
+iris
 </code></pre>
 
-<pre><code>## # A tibble: 32 x 1
-##      mpg
-##  * &lt;dbl&gt;
-##  1  21  
-##  2  21  
-##  3  22.8
-##  4  21.4
-##  5  18.7
-##  6  18.1
-##  7  14.3
-##  8  24.4
-##  9  22.8
-## 10  19.2
-## # ... with 22 more rows
+<pre><code>## # A tibble: 150 x 5
+##     sepL  sepW  petL  petW SP    
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; 
+##  1   5.1   3.5   1.4   0.2 setosa
+##  2   4.9   3     1.4   0.2 setosa
+##  3   4.7   3.2   1.3   0.2 setosa
+##  4   4.6   3.1   1.5   0.2 setosa
+##  5   5     3.6   1.4   0.2 setosa
+##  6   5.4   3.9   1.7   0.4 setosa
+##  7   4.6   3.4   1.4   0.3 setosa
+##  8   5     3.4   1.5   0.2 setosa
+##  9   4.4   2.9   1.4   0.2 setosa
+## 10   4.9   3.1   1.5   0.1 setosa
+## # ... with 140 more rows
 </code></pre>
 
-<ol>
-<li>Seleciona colunas que terminam com a letra &ldquo;t&rdquo;.</li>
-</ol>
-
-<pre><code class="language-r">select(mtcars, ends_with(&quot;t&quot;)) 
-</code></pre>
-
-<pre><code>## # A tibble: 32 x 2
-##     drat    wt
-##  * &lt;dbl&gt; &lt;dbl&gt;
-##  1  3.9   2.62
-##  2  3.9   2.88
-##  3  3.85  2.32
-##  4  3.08  3.22
-##  5  3.15  3.44
-##  6  2.76  3.46
-##  7  3.21  3.57
-##  8  3.69  3.19
-##  9  3.92  3.15
-## 10  3.92  3.44
-## # ... with 22 more rows
-</code></pre>
-
-<ol>
-<li>Seleciona colunas que contém com a letra &ldquo;a&rdquo;.</li>
-</ol>
-
-<pre><code class="language-r">select(mtcars, contains(&quot;g&quot;)) 
-</code></pre>
-
-<pre><code>## # A tibble: 32 x 2
-##      mpg  gear
-##  * &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       4
-##  2  21       4
-##  3  22.8     4
-##  4  21.4     3
-##  5  18.7     3
-##  6  18.1     3
-##  7  14.3     3
-##  8  24.4     4
-##  9  22.8     4
-## 10  19.2     4
-## # ... with 22 more rows
-</code></pre>
-
-<h3 id="mover-uma-coluna-para-a-primeira-posição">Mover uma coluna para a primeira posição</h3>
-
-<p>Selecione uma coluna e depois adicione todas as outras com <code>everything()</code>.</p>
-
-<pre><code class="language-r">select(mtcars, mpg, everything()) 
-</code></pre>
-
-<pre><code>## # A tibble: 32 x 11
-##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
-##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
-##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
-##  4  21.4     6  258    110  3.08  3.22  19.4     1     0     3     1
-##  5  18.7     8  360    175  3.15  3.44  17.0     0     0     3     2
-##  6  18.1     6  225    105  2.76  3.46  20.2     1     0     3     1
-##  7  14.3     8  360    245  3.21  3.57  15.8     0     0     3     4
-##  8  24.4     4  147.    62  3.69  3.19  20       1     0     4     2
-##  9  22.8     4  141.    95  3.92  3.15  22.9     1     0     4     2
-## 10  19.2     6  168.   123  3.92  3.44  18.3     1     0     4     4
-## # ... with 22 more rows
-</code></pre>
-
-<h3 id="mover-uma-coluna-para-a-última-posição">Mover uma coluna para a última posição</h3>
-
-<p>Primeiro remova a coluna com <code>-mpg</code> depois adicione novamente.</p>
-
-<pre><code class="language-r">select(mtcars, -mpg, mpg) 
-</code></pre>
-
-<pre><code>## # A tibble: 32 x 11
-##      cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb   mpg
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-##  1     6  160    110  3.9   2.62  16.5     0     1     4     4  21  
-##  2     6  160    110  3.9   2.88  17.0     0     1     4     4  21  
-##  3     4  108     93  3.85  2.32  18.6     1     1     4     1  22.8
-##  4     6  258    110  3.08  3.22  19.4     1     0     3     1  21.4
-##  5     8  360    175  3.15  3.44  17.0     0     0     3     2  18.7
-##  6     6  225    105  2.76  3.46  20.2     1     0     3     1  18.1
-##  7     8  360    245  3.21  3.57  15.8     0     0     3     4  14.3
-##  8     4  147.    62  3.69  3.19  20       1     0     4     2  24.4
-##  9     4  141.    95  3.92  3.15  22.9     1     0     4     2  22.8
-## 10     6  168.   123  3.92  3.44  18.3     1     0     4     4  19.2
-## # ... with 22 more rows
-</code></pre>
+<blockquote>
+<p>Note que não precisamos colocar o nome das colunas entre aspas, o que facilita
+muito o processo. Além disso, podemos renomear múltiplas colunas ao mesmo tempo
+sepando por vígula.</p>
+</blockquote>
 
 <h2 id="dicas-e-sugestões">Dicas e sugestões?</h2>
 
 <p>Tem alguma crítica? Sugestão? Deixe um comentário ;)</p>
 
 <p>Até a próxima aventura =)</p>
+
+<p><img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Alt Text" /></p>
 
     </div>
 
@@ -678,9 +580,9 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tags/r/">r</a>
-  
   <a class="badge badge-light" href="/tags/dplyr/">dplyr</a>
+  
+  <a class="badge badge-light" href="/tags/r/">r</a>
   
 </div>
 
@@ -792,6 +694,16 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 
     
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/">Como selecionar colunas de uma tabela no R?</a></li>
+        
+      </ul>
+    </div>
     
 
     

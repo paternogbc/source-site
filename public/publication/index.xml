@@ -2,50 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Gustavo Paterno</title>
-    <link>https://paternogbc.netlify.com/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Gustavo Paterno</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0200</lastBuildDate>
     
-	<atom:link href="https://paternogbc.netlify.com/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods</title>
-      <link>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</link>
+      <link>/publication/2018_mee_paterno-et-al_sensiphy/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</guid>
+      <guid>/publication/2018_mee_paterno-et-al_sensiphy/</guid>
       <description>Citation Paterno, G. B., Penone, C., &amp;amp; Werner, G. D. A. (2018). sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods. Methods in Ecology and Evolution, 9(6), 1461–1467. https://doi.org/10.1111/2041-210X.12990</description>
     </item>
     
     <item>
       <title>Integrating ecosystem functions into restoration ecology-recent advances and future directions</title>
-      <link>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</link>
+      <link>/publication/2016_kollmann_restoration-ecology/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 -0200</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</guid>
+      <guid>/publication/2016_kollmann_restoration-ecology/</guid>
       <description>Citation Kollmann, J., Meyer, S. T., Bateman, R., Conradi, T., Gossner, M. M., de Souza Mendonça, M., … Weisser, W. W. (2016). Integrating ecosystem functions into restoration ecology-recent advances and future directions. Restoration Ecology, 24(6), 722–730. https://doi.org/10.1111/rec.12422</description>
     </item>
     
     <item>
       <title>Species-specific facilitation, ontogenetic shifts and consequences for plant community succession</title>
-      <link>https://paternogbc.netlify.com/publication/2016_jvs_paterno-et-al_facilitation/</link>
+      <link>/publication/2016_jvs_paterno-et-al_facilitation/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_jvs_paterno-et-al_facilitation/</guid>
+      <guid>/publication/2016_jvs_paterno-et-al_facilitation/</guid>
       <description>Citation Paterno, G. B., Siqueira Filho, J. A., &amp;amp; Ganade, G. (n.d.). Species-specific facilitation, ontogenetic shifts and consequences for plant community succession. Journal of Vegetation Science, 27(3), 606–615. https://doi.org/10.1111/jvs.12382</description>
     </item>
     
     <item>
       <title>Background noise as a selective pressure: stream-breeding anurans call at higher frequencies</title>
-      <link>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</link>
+      <link>/publication/2016_rhor-et-al_anura-call/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</guid>
+      <guid>/publication/2016_rhor-et-al_anura-call/</guid>
       <description>Citation Röhr, D. L., Paterno, G. B., Camurugi, F., Juncá, F. A., &amp;amp; Garda, A. A. (2016). Background noise as a selective pressure: stream-breeding anurans call at higher frequencies. Organisms Diversity and Evolution, 16(1), 269–273. https://doi.org/10.1007/s13127-015-0256-0</description>
+    </item>
+    
+    <item>
+      <title>Public awareness of the economic potential and threats to sharks of a tropical oceanic archipelago in the western South Atlantic</title>
+      <link>/publication/2016_mp_garla_shark/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 -0300</pubDate>
+      
+      <guid>/publication/2016_mp_garla_shark/</guid>
+      <description>citation Garla, R. C., Freitas, R. H. a., Calado, J. F., Paterno, G. B. C., &amp;amp; Carvalho, A. R. (2015). Public awareness of the economic potential and threats to sharks of a tropical oceanic archipelago in the western South Atlantic. Marine Policy, 60, 128–133. https://doi.org/10.1016/j.marpol.2015.06.012</description>
     </item>
     
   </channel>
