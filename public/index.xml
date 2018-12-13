@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gustavo Paterno on Gustavo Paterno</title>
-    <link>https://paternogbc.netlify.com/</link>
+    <link>/</link>
     <description>Recent content in Gustavo Paterno on Gustavo Paterno</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,155 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?</title>
+      <link>/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/</guid>
+      <description>
+
+&lt;h1 id=&#34;o-pacote-dplyr&#34;&gt;O pacote &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;dplyr&lt;/strong&gt; é uma gramática para a manipulação de dados, oferecendo uma série de
+verbos consistentes que ajudam você a resolver os principais desafios de
+manipulação de dados e tabelas no R&amp;rdquo; (&lt;a href=&#34;https://dplyr.tidyverse.org&#34; target=&#34;_blank&#34;&gt;https://dplyr.tidyverse.org&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;rename&#34;&gt;&lt;code&gt;rename()&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Neste tutorial iremos aprender a usar o verbo &lt;code&gt;rename()&lt;/code&gt; (renomear).&lt;/p&gt;
+
+&lt;p&gt;A função &lt;code&gt;renomear()&lt;/code&gt; modifica o nome de uma ou mais colunas de uma
+tabela de dados. Todas as colunas são mantidas.&lt;/p&gt;
+
+&lt;h2 id=&#34;forma-de-uso&#34;&gt;Forma de uso&lt;/h2&gt;
+
+&lt;p&gt;A forma de usar a função segue essa formula:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dados &amp;lt;- rename(dados, new_name = old_name)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Este comando irá modificar o nome da coluna &amp;ldquo;old_name&amp;rdquo; para &amp;ldquo;new_name&amp;rdquo;.
+Vamos ver como funciona na prática.&lt;/p&gt;
+
+&lt;h2 id=&#34;exemplos&#34;&gt;Exemplos&lt;/h2&gt;
+
+&lt;p&gt;A tabela abaixo possui &lt;strong&gt;5 colunas&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;iris &amp;lt;- as_tibble(iris) # transformando em tibble (não é necessário)
+head(iris)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt;  
+## 1          5.1         3.5          1.4         0.2 setosa 
+## 2          4.9         3            1.4         0.2 setosa 
+## 3          4.7         3.2          1.3         0.2 setosa 
+## 4          4.6         3.1          1.5         0.2 setosa 
+## 5          5           3.6          1.4         0.2 setosa 
+## 6          5.4         3.9          1.7         0.4 setosa
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Suponha que queremos modificar o nome da coluna &amp;ldquo;Species&amp;rdquo; e trocar por &amp;ldquo;SP&amp;rdquo;.&lt;/p&gt;
+
+&lt;h3 id=&#34;comando-sem-dplyr&#34;&gt;Comando sem &lt;code&gt;dplyr&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;colnames(iris)[5] &amp;lt;- &amp;quot;sp&amp;quot;
+iris
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;comando-com-dplyr&#34;&gt;Comando com &lt;code&gt;dplyr&lt;/code&gt;&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;iris &amp;lt;- rename(iris, SP = Species)
+iris
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 150 x 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width SP    
+##           &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt; 
+##  1          5.1         3.5          1.4         0.2 setosa
+##  2          4.9         3            1.4         0.2 setosa
+##  3          4.7         3.2          1.3         0.2 setosa
+##  4          4.6         3.1          1.5         0.2 setosa
+##  5          5           3.6          1.4         0.2 setosa
+##  6          5.4         3.9          1.7         0.4 setosa
+##  7          4.6         3.4          1.4         0.3 setosa
+##  8          5           3.4          1.5         0.2 setosa
+##  9          4.4         2.9          1.4         0.2 setosa
+## 10          4.9         3.1          1.5         0.1 setosa
+## # ... with 140 more rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agora suponha que queremos modificar o nome das colunas &amp;ldquo;Sepal.Length&amp;rdquo; e &amp;ldquo;Sepal.Width para &amp;ldquo;sepL&amp;rdquo;
+e &amp;ldquo;sepW&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;iris &amp;lt;- rename(iris, sepL = Sepal.Length, sepW = Sepal.Width)
+iris
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 150 x 5
+##     sepL  sepW Petal.Length Petal.Width SP    
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt; 
+##  1   5.1   3.5          1.4         0.2 setosa
+##  2   4.9   3            1.4         0.2 setosa
+##  3   4.7   3.2          1.3         0.2 setosa
+##  4   4.6   3.1          1.5         0.2 setosa
+##  5   5     3.6          1.4         0.2 setosa
+##  6   5.4   3.9          1.7         0.4 setosa
+##  7   4.6   3.4          1.4         0.3 setosa
+##  8   5     3.4          1.5         0.2 setosa
+##  9   4.4   2.9          1.4         0.2 setosa
+## 10   4.9   3.1          1.5         0.1 setosa
+## # ... with 140 more rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Agora suponha que queremos modificar o nome das colunas &amp;ldquo;Peal.Length&amp;rdquo; e &amp;ldquo;Peal.Width para &amp;ldquo;petL&amp;rdquo;
+e &amp;ldquo;petW&amp;rdquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;iris &amp;lt;- rename(iris, petL = Petal.Length, petW = Petal.Width)
+iris
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 150 x 5
+##     sepL  sepW  petL  petW SP    
+##    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt; 
+##  1   5.1   3.5   1.4   0.2 setosa
+##  2   4.9   3     1.4   0.2 setosa
+##  3   4.7   3.2   1.3   0.2 setosa
+##  4   4.6   3.1   1.5   0.2 setosa
+##  5   5     3.6   1.4   0.2 setosa
+##  6   5.4   3.9   1.7   0.4 setosa
+##  7   4.6   3.4   1.4   0.3 setosa
+##  8   5     3.4   1.5   0.2 setosa
+##  9   4.4   2.9   1.4   0.2 setosa
+## 10   4.9   3.1   1.5   0.1 setosa
+## # ... with 140 more rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note que não precisamos colocar o nome das colunas entre aspas, o que facilita
+muito o processo. Além disso, podemos renomear múltiplas colunas ao mesmo tempo
+sepando por vígula.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;dicas-e-sugestões&#34;&gt;Dicas e sugestões?&lt;/h2&gt;
+
+&lt;p&gt;Tem alguma crítica? Sugestão? Deixe um comentário ;)&lt;/p&gt;
+
+&lt;p&gt;Até a próxima aventura =)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif&#34; alt=&#34;Alt Text&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Como selecionar colunas de uma tabela no R?</title>
-      <link>https://paternogbc.netlify.com/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</link>
+      <link>/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</link>
       <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://paternogbc.netlify.com/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</guid>
+      <guid>/post/dplyr_select/como-selecionar-colunas-de-uma-tabela-no-r/</guid>
       <description>
 
 &lt;h1 id=&#34;o-pacote-dplyr&#34;&gt;O pacote &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
@@ -253,11 +397,41 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     </item>
     
     <item>
+      <title>Example Page</title>
+      <link>/tutorial/example/</link>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0300</pubDate>
+      
+      <guid>/tutorial/example/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0300</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods</title>
-      <link>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</link>
+      <link>/publication/2018_mee_paterno-et-al_sensiphy/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2018_mee_paterno-et-al_sensiphy/</guid>
+      <guid>/publication/2018_mee_paterno-et-al_sensiphy/</guid>
       <description>
 
 &lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
@@ -268,10 +442,10 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     
     <item>
       <title>Example Talk</title>
-      <link>https://paternogbc.netlify.com/talk/example/</link>
+      <link>/talk/example/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0200</pubDate>
       
-      <guid>https://paternogbc.netlify.com/talk/example/</guid>
+      <guid>/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
 
@@ -292,10 +466,10 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     
     <item>
       <title>Integrating ecosystem functions into restoration ecology-recent advances and future directions</title>
-      <link>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</link>
+      <link>/publication/2016_kollmann_restoration-ecology/</link>
       <pubDate>Tue, 01 Nov 2016 00:00:00 -0200</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_kollmann_restoration-ecology/</guid>
+      <guid>/publication/2016_kollmann_restoration-ecology/</guid>
       <description>
 
 &lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
@@ -306,10 +480,10 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     
     <item>
       <title>Species-specific facilitation, ontogenetic shifts and consequences for plant community succession</title>
-      <link>https://paternogbc.netlify.com/publication/2016_jvs_paterno-et-al_facilitation/</link>
+      <link>/publication/2016_jvs_paterno-et-al_facilitation/</link>
       <pubDate>Thu, 01 Sep 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_jvs_paterno-et-al_facilitation/</guid>
+      <guid>/publication/2016_jvs_paterno-et-al_facilitation/</guid>
       <description>
 
 &lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
@@ -320,19 +494,19 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     
     <item>
       <title>External Project</title>
-      <link>https://paternogbc.netlify.com/project/external-project/</link>
+      <link>/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/project/external-project/</guid>
+      <guid>/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>https://paternogbc.netlify.com/project/internal-project/</link>
+      <link>/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/project/internal-project/</guid>
+      <guid>/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -347,10 +521,10 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     
     <item>
       <title>Background noise as a selective pressure: stream-breeding anurans call at higher frequencies</title>
-      <link>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</link>
+      <link>/publication/2016_rhor-et-al_anura-call/</link>
       <pubDate>Tue, 01 Mar 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://paternogbc.netlify.com/publication/2016_rhor-et-al_anura-call/</guid>
+      <guid>/publication/2016_rhor-et-al_anura-call/</guid>
       <description>
 
 &lt;h3 id=&#34;citation&#34;&gt;Citation&lt;/h3&gt;
@@ -360,11 +534,25 @@ o nome das variáveis entre &amp;ldquo;aspas&amp;rdquo;, o que torna o comando m
     </item>
     
     <item>
+      <title>Public awareness of the economic potential and threats to sharks of a tropical oceanic archipelago in the western South Atlantic</title>
+      <link>/publication/2016_mp_garla_shark/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 -0300</pubDate>
+      
+      <guid>/publication/2016_mp_garla_shark/</guid>
+      <description>
+
+&lt;h3 id=&#34;citation&#34;&gt;citation&lt;/h3&gt;
+
+&lt;p&gt;Garla, R. C., Freitas, R. H. a., Calado, J. F., Paterno, G. B. C., &amp;amp; Carvalho, A. R. (2015). Public awareness of the economic potential and threats to sharks of a tropical oceanic archipelago in the western South Atlantic. &lt;strong&gt;Marine Policy, 60, 128–133&lt;/strong&gt;. &lt;a href=&#34;https://doi.org/10.1016/j.marpol.2015.06.012&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1016/j.marpol.2015.06.012&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Slides</title>
-      <link>https://paternogbc.netlify.com/slides/example-slides/</link>
+      <link>/slides/example-slides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://paternogbc.netlify.com/slides/example-slides/</guid>
+      <guid>/slides/example-slides/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;

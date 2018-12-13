@@ -1,0 +1,99 @@
+---
+title: Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?
+author: Gustavo Paterno
+date: '2018-12-13'
+slug: como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr
+categories:
+  - tutorial
+tags:
+  - dplyr
+  - r
+image:
+  caption: ''
+  focal_point: ''
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
+library(kableExtra)
+library(tidyverse)
+library(emo)
+```
+
+# O pacote `dplyr`
+
+> "__dplyr__ é uma gramática para a manipulação de dados, oferecendo uma série de 
+verbos consistentes que ajudam você a resolver os principais desafios de 
+manipulação de dados e tabelas no R" ([https://dplyr.tidyverse.org](https://dplyr.tidyverse.org))
+
+## `rename()`
+
+Neste tutorial iremos aprender a usar o verbo `rename()` (renomear).
+
+A função `renomear()` modifica o nome de uma ou mais colunas de uma 
+tabela de dados. Todas as colunas são mantidas. 
+
+## Forma de uso
+
+A forma de usar a função segue essa formula:
+
+```{r eval=F}
+dados <- rename(dados, new_name = old_name)
+```
+
+Este comando irá modificar o nome da coluna "old_name" para "new_name". 
+Vamos ver como funciona na prática.
+
+## Exemplos
+
+A tabela abaixo possui __5 colunas__! 
+
+```{r eval=T, echo=T}
+iris <- as_tibble(iris) # transformando em tibble (não é necessário)
+head(iris)
+```
+
+
+Suponha que queremos modificar o nome da coluna "Species" e trocar por "SP".
+
+### Comando sem `dplyr`
+
+```{r eval = F}
+colnames(iris)[5] <- "sp"
+iris
+```
+
+### Comando com `dplyr`
+
+```{r}
+iris <- rename(iris, SP = Species)
+iris
+```
+
+Agora suponha que queremos modificar o nome das colunas "Sepal.Length" e "Sepal.Width para "sepL"
+e "sepW".
+
+```{r}
+iris <- rename(iris, sepL = Sepal.Length, sepW = Sepal.Width)
+iris
+```
+
+Agora suponha que queremos modificar o nome das colunas "Peal.Length" e "Peal.Width para "petL"
+e "petW".
+
+```{r}
+iris <- rename(iris, petL = Petal.Length, petW = Petal.Width)
+iris
+```
+
+> Note que não precisamos colocar o nome das colunas entre aspas, o que facilita 
+muito o processo. Além disso, podemos renomear múltiplas colunas ao mesmo tempo
+sepando por vígula. 
+
+## Dicas e sugestões?
+
+Tem alguma crítica? Sugestão? Deixe um comentário ;) 
+
+Até a próxima aventura =)
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
