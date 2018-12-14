@@ -8,9 +8,6 @@ categories:
 tags:
   - dplyr
   - r
-image:
-  caption: ''
-  focal_point: ''
 ---
 
 
