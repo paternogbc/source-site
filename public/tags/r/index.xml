@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
-    <lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TidyTuesday semana 38 - Cetáceos dos estados Unidos</title>
+      <link>/post/tidy_tuesday_w38_cetaceans/</link>
+      <pubDate>Tue, 18 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tidy_tuesday_w38_cetaceans/</guid>
+      <description>O projeto Tidy Tuesday  O projeto Tidy Tuesday é um projeto semanal de análise de dados no R. A iniciativa dá ênfase em compreender como organizar, processar e visualizar dados utilizando os pacotes ggplot2, tidyr, dplyr e outras ferramentas do universo tidyverse.
+ A iniciativa 1. toda terça-feira será publicado um banco de dados novo e diferente sobre os mais variados assuntos. O banco de dados é disponibilizado através deste [repósitório]() no Github.</description>
+    </item>
     
     <item>
       <title>Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?</title>

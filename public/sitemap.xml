@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
+  
+    
+    <url>
+    
+      <loc>/post/tidy_tuesday_w38_cetaceans/</loc>
+      <lastmod>2018-12-18T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
     <url>
     
       <loc>/post/dplyr_rename/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/</loc>
@@ -20,7 +32,7 @@
     
     <url>
     
-      <loc>/tutorial/example/</loc>
+      <loc>/tutorial/dply2/</loc>
       <lastmod>2018-09-09T00:00:00-03:00</lastmod>
     </url>
     
@@ -29,6 +41,14 @@
     <url>
     
       <loc>/tutorial/</loc>
+      <lastmod>2018-09-09T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tutorial/example/</loc>
       <lastmod>2018-09-09T00:00:00-03:00</lastmod>
     </url>
     
@@ -69,6 +89,14 @@
     <url>
     
       <loc>/publication/</loc>
+      <lastmod>2017-01-01T00:00:00-02:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/aprendiz/</loc>
       <lastmod>2017-01-01T00:00:00-02:00</lastmod>
     </url>
     
@@ -255,7 +283,7 @@
     <url>
     
       <loc>/tags/dplyr/</loc>
-      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -309,7 +337,7 @@
     <url>
     
       <loc>/tags/r/</loc>
-      <lastmod>2018-12-13T00:00:00+00:00</lastmod>
+      <lastmod>2018-12-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -319,6 +347,15 @@
     
       <loc>/tags/restoration-ecology/</loc>
       <lastmod>2016-11-01T00:00:00-02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/tidytuesday/</loc>
+      <lastmod>2018-12-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

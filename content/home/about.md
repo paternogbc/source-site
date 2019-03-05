@@ -10,31 +10,29 @@ weight = 10
 # List your academic interests.
 [interests]
   interests = [
-    "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Ecology",
+    "Evolution",
+    "Data Analysis"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
+  course = "PhD in Ecology"
+  institution = "Universidade Federal do Rio Grande do Norte"
+  year = 2018
 
 [[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
+  course = "M.Sc. in Ecology"
+  institution = "Universidade Federal do Rio Grande do Norte"
+  year = 2013
 
 [[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
+  course = "B.Sc. in Ecology"
+  institution = "Universidade Federal do Rio Grande do Norte"
   year = 2008
  
 +++
 
-# Biography
+# Summary
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+I am interested in Ecology, Evolution and Data Analysis. My current research is focused on the role of herbivores and sexual selection on the evolution of sex and the diversification of the Angiosperms. I am also interested in the mechanisms shaping plant community structure and their implications to restoration ecology. I have great interest in statistics and data vizualization, phylogenetics and developing open software. 

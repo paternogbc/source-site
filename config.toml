@@ -330,6 +330,15 @@ enableGitInfo = false
   url = "#contact"
   weight = 6
 
+[[menu.main]]
+  name = "R Aprendiz"
+  url = "aprendiz"
+  weight = 7
+
+[[menu.main]]
+  name = "Tutoriais"
+  url = "tutorial"
+  weight = 7
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[menu.main]]
