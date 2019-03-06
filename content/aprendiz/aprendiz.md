@@ -26,7 +26,3 @@ count = 100
 #   2 = Stream
 list_format = 2
 +++
-
-# test kjkjsklajkdjasd
-sfdsf
-ddfgfdg

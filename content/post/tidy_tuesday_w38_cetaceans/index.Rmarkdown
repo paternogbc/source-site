@@ -63,7 +63,7 @@ Utilizamos o pacote `RCurl` para baixar os dados do repositório.
 
 ```{r}
 ### Load data----
-url <- "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-12-18/allCetaceanData.csv"
+url <- "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-12-18/allCetaceanData.csv"
 d <- read_csv(getURL(url))
 
 glimpse(d)
@@ -138,10 +138,6 @@ ggplot(dc, aes(x = species, y = n, fill = sex)) +
        x = "") +
   coord_flip()
 ```
-
-### Quanots nasceram em cativeiro ao longo do tempo?
-
-
 
 
 ## Dicas e sugestões?

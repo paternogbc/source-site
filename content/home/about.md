@@ -35,4 +35,4 @@ weight = 10
 
 # Summary
 
-I am interested in Ecology, Evolution and Data Analysis. My current research is focused on the role of herbivores and sexual selection on the evolution of sex and the diversification of the Angiosperms. I am also interested in the mechanisms shaping plant community structure and their implications to restoration ecology. I have great interest in statistics and data vizualization, phylogenetics and developing open software. 
+I am interested in Ecology, Evolution and Data Analysis. My current research is focused on the role of herbivores and sexual selection on the evolution of sex and the diversification of the Angiosperms. I am also interested in the mechanisms shaping plant community structure and their implications to restoration ecology. I have great interest in statistics and data vizualization, phylogenetics and developing open software. Check it out my [CV](https://github.com/paternogbc/my-cv-markdown/raw/master/cv-template.pdf).
