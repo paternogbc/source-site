@@ -87,7 +87,7 @@ select(mtcars, mpg, cyl, wt)
 ```
 ## # A tibble: 32 x 3
 ##      mpg   cyl    wt
-##  * <dbl> <dbl> <dbl>
+##    <dbl> <dbl> <dbl>
 ##  1  21       6  2.62
 ##  2  21       6  2.88
 ##  3  22.8     4  2.32
@@ -117,7 +117,7 @@ select(mtcars, -mpg, -cyl, -wt)
 ```
 ## # A tibble: 32 x 8
 ##     disp    hp  drat  qsec    vs    am  gear  carb
-##  * <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ##  1  160    110  3.9   16.5     0     1     4     4
 ##  2  160    110  3.9   17.0     0     1     4     4
 ##  3  108     93  3.85  18.6     1     1     4     1
@@ -146,7 +146,7 @@ select(mtcars, starts_with("m"))
 ```
 ## # A tibble: 32 x 1
 ##      mpg
-##  * <dbl>
+##    <dbl>
 ##  1  21  
 ##  2  21  
 ##  3  22.8
@@ -170,7 +170,7 @@ select(mtcars, ends_with("t"))
 ```
 ## # A tibble: 32 x 2
 ##     drat    wt
-##  * <dbl> <dbl>
+##    <dbl> <dbl>
 ##  1  3.9   2.62
 ##  2  3.9   2.88
 ##  3  3.85  2.32
@@ -194,7 +194,7 @@ select(mtcars, contains("g"))
 ```
 ## # A tibble: 32 x 2
 ##      mpg  gear
-##  * <dbl> <dbl>
+##    <dbl> <dbl>
 ##  1  21       4
 ##  2  21       4
 ##  3  22.8     4
@@ -220,7 +220,7 @@ select(mtcars, mpg, everything())
 ```
 ## # A tibble: 32 x 11
 ##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##  * <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
 ##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
 ##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
@@ -246,7 +246,7 @@ select(mtcars, -mpg, mpg)
 ```
 ## # A tibble: 32 x 11
 ##      cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb   mpg
-##  * <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+##    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ##  1     6  160    110  3.9   2.62  16.5     0     1     4     4  21  
 ##  2     6  160    110  3.9   2.88  17.0     0     1     4     4  21  
 ##  3     4  108     93  3.85  2.32  18.6     1     1     4     1  22.8

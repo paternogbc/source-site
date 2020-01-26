@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 3.2.0">
-  <meta name="generator" content="Hugo 0.54.0" />
+  <meta name="generator" content="Hugo 0.50" />
   <meta name="author" content="Gustavo B Paterno">
 
   
@@ -224,25 +224,6 @@ A função select() seleciona e mantém apenas as variáveis que você deseja em
           <a class="nav-link" href="/post">
             
             <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/aprendiz">
-            
-            <span>R Aprendiz</span>
             
           </a>
         </li>
@@ -678,7 +659,7 @@ tabela <code>mtcars</code>.</p>
 
 <pre><code>## # A tibble: 32 x 3
 ##      mpg   cyl    wt
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ##  1  21       6  2.62
 ##  2  21       6  2.88
 ##  3  22.8     4  2.32
@@ -705,7 +686,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 8
 ##     disp    hp  drat  qsec    vs    am  gear  carb
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ##  1  160    110  3.9   16.5     0     1     4     4
 ##  2  160    110  3.9   17.0     0     1     4     4
 ##  3  108     93  3.85  18.6     1     1     4     1
@@ -733,7 +714,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 1
 ##      mpg
-##  * &lt;dbl&gt;
+##    &lt;dbl&gt;
 ##  1  21  
 ##  2  21  
 ##  3  22.8
@@ -756,7 +737,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 2
 ##     drat    wt
-##  * &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt;
 ##  1  3.9   2.62
 ##  2  3.9   2.88
 ##  3  3.85  2.32
@@ -779,7 +760,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 2
 ##      mpg  gear
-##  * &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt;
 ##  1  21       4
 ##  2  21       4
 ##  3  22.8     4
@@ -802,7 +783,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 11
 ##      mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ##  1  21       6  160    110  3.9   2.62  16.5     0     1     4     4
 ##  2  21       6  160    110  3.9   2.88  17.0     0     1     4     4
 ##  3  22.8     4  108     93  3.85  2.32  18.6     1     1     4     1
@@ -825,7 +806,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
 
 <pre><code>## # A tibble: 32 x 11
 ##      cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb   mpg
-##  * &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ##  1     6  160    110  3.9   2.62  16.5     0     1     4     4  21  
 ##  2     6  160    110  3.9   2.88  17.0     0     1     4     4  21  
 ##  3     4  108     93  3.85  2.32  18.6     1     1     4     1  22.8
@@ -1008,7 +989,7 @@ o nome das variáveis entre &ldquo;aspas&rdquo;, o que torna o comando mais fác
   
 
   <p class="powered-by">
-    &copy; Gustavo Paterno 2018 &middot; 
+    &copy; Gustavo Paterno 2020 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

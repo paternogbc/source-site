@@ -17,7 +17,6 @@ image:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
 library(kableExtra)
 library(tidyverse)
-library(emo)
 ```
 
 # O pacote `dplyr`

@@ -6,16 +6,25 @@
     <description>Recent content in phylogenetics on Gustavo Paterno</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; Gustavo Paterno 2018</copyright>
-    <lastBuildDate>Mon, 01 Jan 2018 00:00:00 -0200</lastBuildDate>
+    <copyright>&amp;copy; Gustavo Paterno 2020</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 -0300</lastBuildDate>
     
 	<atom:link href="/tags/phylogenetics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Evolution of aerial spider webs coincided with repeated structural optimization of silk anchorages</title>
+      <link>/publication/2019_wolff_spider_evolution/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 -0300</pubDate>
+      
+      <guid>/publication/2019_wolff_spider_evolution/</guid>
+      <description>Citation Wolff, J. O., Paterno, G. B., Liprandi, D., Ramírez, M. J., Bosia, F., Meijden, A., Michalik, P., Smith, H. M., Jones, B. R., Ravelo, A. M., Pugno, N., &amp;amp; Herberstein, M. E. (2019). Evolution of aerial spider webs coincided with repeated structural optimization of silk anchorages. Evolution, 73(10), 2122–2134. https://doi.org/10.1111/evo.13834</description>
+    </item>
+    
+    <item>
       <title>sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods</title>
       <link>/publication/2018_mee_paterno-et-al_sensiphy/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 -0200</pubDate>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 -0300</pubDate>
       
       <guid>/publication/2018_mee_paterno-et-al_sensiphy/</guid>
       <description>Citation Paterno, G. B., Penone, C., &amp;amp; Werner, G. D. A. (2018). sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods. Methods in Ecology and Evolution, 9(6), 1461–1467. https://doi.org/10.1111/2041-210X.12990</description>

@@ -4,7 +4,7 @@ date = 2018-01-01T00:00:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Gustavo Brant Paterno", "Caterina Penone", "Gijsbert Werner"]
+authors = ["Gustavo Brant Paterno" , "Caterina Penone" , "Gijsbert Werner"]
 
 # Publication type.
 # Legend:
@@ -23,6 +23,7 @@ publication_short = "In *Methods in Ecology and Evolution 9(6), 1461–1467*"
 
 # Abstract and optional shortened version.
 abstract = "Biological conclusions drawn from phylogenetic comparative methods can be sen-sitive to uncertainty in species sampling, phylogeny and data. To be confident about our conclusions, we need to quantify their robustness to such uncertainty. 2. We present sensiPhy, an r-package, to easily and rapidly perform sensitivity analysis for phylogenetic comparative methods. sensiPhy allows researchers to evaluate the sampling effort, detect influential species and clades, assess phylogenetic uncertainty and quantify the effects of intraspecific variation, for phylogenetic regression and for metrics of phylogenetic signal, diversification and trait evolution. 3. Uniquely, sensiPhy allows users to simultaneously quantify the effects of different types of uncertainty and potential interactions among them. 4. Using real data, we show how conclusions from comparative methods can be affected by uncertainty and how sensiPhy can help determine if a conclusion is robust. 5. By providing a single, intuitive and user-friendly resource that can evaluate various sources of uncertainty, sensiPhy aims to encourage researchers, and particularly less-experienced users, to incorporate sensitivity analyses in their phylogenetic comparative analyses."
+
 abstract_short = ""
 
 # Is this a selected publication? (true/false)
@@ -49,11 +50,11 @@ slides = ""
 tags = ["evolution", "comparative methods", "phylogenetics"]
 
 # Links (optional).
-url_pdf = "https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12990"
+url_pdf = "https://doi.org/10.1111/2041-210X.12990"
 url_preprint = ""
-url_code = ""
-url_dataset = ""
-url_project = ""
+url_code = "https://github.com/paternogbc/sensiPhy"
+url_dataset = "https://zenodo.org/record/1179248"
+url_project = "https://github.com/paternogbc/sensiPhy/wiki"
 url_slides = ""
 url_video = ""
 url_poster = ""
@@ -64,7 +65,7 @@ url_source = ""
 # url_custom = [{name = "Custom Link", url = "http://example.org"}]
 
 # Digital Object Identifier (DOI)
-doi = "10.1111/2041-210X.12990"
+doi = "10.1111/evo.13834"
 
 # Does this page contain LaTeX math? (true/false)
 math = false
@@ -82,5 +83,4 @@ math = false
 
 ### Citation
 
-Paterno, G. B., Penone, C., & Werner, G. D. A. (2018). sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods. __Methods in Ecology and Evolution__, 9(6), 1461–1467. https://doi.org/10.1111/2041-210X.12990
-
+Paterno, G. B., Penone, C., & Werner, G. D. A. (2018). sensiPhy: An r-package for sensitivity analysis in phylogenetic comparative methods. _Methods in Ecology and Evolution_, 9(6), 1461–1467. https://doi.org/10.1111/2041-210X.12990

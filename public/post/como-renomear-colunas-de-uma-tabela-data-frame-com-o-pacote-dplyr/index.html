@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.2.0">
+  <meta name="generator" content="Hugo 0.63.1" />
+  <meta name="author" content="Gustavo B Paterno">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="O pacote dplyr  &ldquo;dplyr é uma gramática para a manipulação de dados, oferecendo uma série de verbos consistentes que ajudam você a resolver os principais desafios de manipulação de dados e tabelas no R&rdquo; (https://dplyr.tidyverse.org)
+ rename() Neste tutorial iremos aprender a usar o verbo rename() (renomear).
+A função renomear() modifica o nome de uma ou mais colunas de uma tabela de dados. Todas as colunas são mantidas.
+Forma de uso A forma de usar a função segue essa formula:">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css" crossorigin="anonymous">
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Gustavo Paterno">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Gustavo Paterno">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
+
+  
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@paternogb">
+  <meta property="twitter:creator" content="@paternogb">
+  
+  <meta property="og:site_name" content="Gustavo Paterno">
+  <meta property="og:url" content="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/">
+  <meta property="og:title" content="Como renomear colunas de uma tabela (data.frame) com o pacote dplyr? | Gustavo Paterno">
+  <meta property="og:description" content="O pacote dplyr  &ldquo;dplyr é uma gramática para a manipulação de dados, oferecendo uma série de verbos consistentes que ajudam você a resolver os principais desafios de manipulação de dados e tabelas no R&rdquo; (https://dplyr.tidyverse.org)
+ rename() Neste tutorial iremos aprender a usar o verbo rename() (renomear).
+A função renomear() modifica o nome de uma ou mais colunas de uma tabela de dados. Todas as colunas são mantidas.
+Forma de uso A forma de usar a função segue essa formula:"><meta property="og:image" content="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/featured.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-12-13T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-12-13T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Como renomear colunas de uma tabela (data.frame) com o pacote dplyr? | Gustavo Paterno</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Gustavo Paterno"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/publication">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/post">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/aprendiz">
+            
+            <span>R Aprendiz</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>About</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/files/cv-template.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-header d-xl-none">
+  <div class="featured-image" style="background-image: url('/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/featured_hub1a9977f0e436a5a2b59a6d4f532adb6_19399_800x0_resize_box_2.png');"></div>
+  
+</div>
+
+
+<div class="container-fluid split-header d-none d-xl-block">
+  <div class="row">
+    <div class="col-6">
+      <div class="split-header-content">
+        <h1 itemprop="name">Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?</h1>
+
+        
+
+        
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Gustavo B Paterno">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Dec 13, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Gustavo B Paterno">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/tutorial/">tutorial</a>
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;body=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="split-header-image">
+        <img src="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/featured_hub1a9977f0e436a5a2b59a6d4f532adb6_19399_680x500_fill_q90_box_smart1_2.png" itemprop="image" alt="">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-container d-xl-none">
+  <h1 itemprop="name">Como renomear colunas de uma tabela (data.frame) com o pacote dplyr?</h1>
+
+  
+
+  
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Gustavo B Paterno">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2018-12-13 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Dec 13, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Gustavo B Paterno">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/como-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr/#disqus_thread"></a>
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/tutorial/">tutorial</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f&amp;title=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Como%20renomear%20colunas%20de%20uma%20tabela%20%28data.frame%29%20com%20o%20pacote%20dplyr%3f&amp;body=%2fpost%2fcomo-renomear-colunas-de-uma-tabela-data-frame-com-o-pacote-dplyr%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <h1 id="o-pacote-dplyr">O pacote <code>dplyr</code></h1>
+<blockquote>
+<p>&ldquo;<strong>dplyr</strong> é uma gramática para a manipulação de dados, oferecendo uma série de 
+verbos consistentes que ajudam você a resolver os principais desafios de 
+manipulação de dados e tabelas no R&rdquo; (<a href="https://dplyr.tidyverse.org">https://dplyr.tidyverse.org</a>)</p>
+</blockquote>
+<h2 id="rename"><code>rename()</code></h2>
+<p>Neste tutorial iremos aprender a usar o verbo <code>rename()</code> (renomear).</p>
+<p>A função <code>renomear()</code> modifica o nome de uma ou mais colunas de uma 
+tabela de dados. Todas as colunas são mantidas.</p>
+<h2 id="forma-de-uso">Forma de uso</h2>
+<p>A forma de usar a função segue essa formula:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">dados <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rename</span>(dados, new_name <span style="color:#f92672">=</span> old_name)
+</code></pre></div><p>Este comando irá modificar o nome da coluna &ldquo;old_name&rdquo; para &ldquo;new_name&rdquo;. 
+Vamos ver como funciona na prática.</p>
+<h2 id="exemplos">Exemplos</h2>
+<p>A tabela abaixo possui <strong>5 colunas</strong>!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">as_tibble</span>(iris) <span style="color:#75715e"># transformando em tibble (não é necessário)</span>
+<span style="color:#a6e22e">head</span>(iris)
+</code></pre></div><pre><code>## # A tibble: 6 x 5
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+##          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+## 1          5.1         3.5          1.4         0.2 setosa 
+## 2          4.9         3            1.4         0.2 setosa 
+## 3          4.7         3.2          1.3         0.2 setosa 
+## 4          4.6         3.1          1.5         0.2 setosa 
+## 5          5           3.6          1.4         0.2 setosa 
+## 6          5.4         3.9          1.7         0.4 setosa
+</code></pre><p>Suponha que queremos modificar o nome da coluna &ldquo;Species&rdquo; e trocar por &ldquo;SP&rdquo;.</p>
+<h3 id="comando-sem-dplyr">Comando sem <code>dplyr</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">colnames</span>(iris)[5] <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">sp&#34;</span>
+iris
+</code></pre></div><h3 id="comando-com-dplyr">Comando com <code>dplyr</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rename</span>(iris, SP <span style="color:#f92672">=</span> Species)
+iris
+</code></pre></div><pre><code>## # A tibble: 150 x 5
+##    Sepal.Length Sepal.Width Petal.Length Petal.Width SP    
+##           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt; 
+##  1          5.1         3.5          1.4         0.2 setosa
+##  2          4.9         3            1.4         0.2 setosa
+##  3          4.7         3.2          1.3         0.2 setosa
+##  4          4.6         3.1          1.5         0.2 setosa
+##  5          5           3.6          1.4         0.2 setosa
+##  6          5.4         3.9          1.7         0.4 setosa
+##  7          4.6         3.4          1.4         0.3 setosa
+##  8          5           3.4          1.5         0.2 setosa
+##  9          4.4         2.9          1.4         0.2 setosa
+## 10          4.9         3.1          1.5         0.1 setosa
+## # ... with 140 more rows
+</code></pre><p>Agora suponha que queremos modificar o nome das colunas &ldquo;Sepal.Length&rdquo; e &ldquo;Sepal.Width para &ldquo;sepL&rdquo;
+e &ldquo;sepW&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rename</span>(iris, sepL <span style="color:#f92672">=</span> Sepal.Length, sepW <span style="color:#f92672">=</span> Sepal.Width)
+iris
+</code></pre></div><pre><code>## # A tibble: 150 x 5
+##     sepL  sepW Petal.Length Petal.Width SP    
+##    &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt; 
+##  1   5.1   3.5          1.4         0.2 setosa
+##  2   4.9   3            1.4         0.2 setosa
+##  3   4.7   3.2          1.3         0.2 setosa
+##  4   4.6   3.1          1.5         0.2 setosa
+##  5   5     3.6          1.4         0.2 setosa
+##  6   5.4   3.9          1.7         0.4 setosa
+##  7   4.6   3.4          1.4         0.3 setosa
+##  8   5     3.4          1.5         0.2 setosa
+##  9   4.4   2.9          1.4         0.2 setosa
+## 10   4.9   3.1          1.5         0.1 setosa
+## # ... with 140 more rows
+</code></pre><p>Agora suponha que queremos modificar o nome das colunas &ldquo;Peal.Length&rdquo; e &ldquo;Peal.Width para &ldquo;petL&rdquo;
+e &ldquo;petW&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">iris <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rename</span>(iris, petL <span style="color:#f92672">=</span> Petal.Length, petW <span style="color:#f92672">=</span> Petal.Width)
+iris
+</code></pre></div><pre><code>## # A tibble: 150 x 5
+##     sepL  sepW  petL  petW SP    
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; 
+##  1   5.1   3.5   1.4   0.2 setosa
+##  2   4.9   3     1.4   0.2 setosa
+##  3   4.7   3.2   1.3   0.2 setosa
+##  4   4.6   3.1   1.5   0.2 setosa
+##  5   5     3.6   1.4   0.2 setosa
+##  6   5.4   3.9   1.7   0.4 setosa
+##  7   4.6   3.4   1.4   0.3 setosa
+##  8   5     3.4   1.5   0.2 setosa
+##  9   4.4   2.9   1.4   0.2 setosa
+## 10   4.9   3.1   1.5   0.1 setosa
+## # ... with 140 more rows
+</code></pre><blockquote>
+<p>Note que não precisamos colocar o nome das colunas entre aspas, o que facilita 
+muito o processo. Além disso, podemos renomear múltiplas colunas ao mesmo tempo
+sepando por vígula.</p>
+</blockquote>
+<h2 id="dicas-e-sugestões">Dicas e sugestões?</h2>
+<p>Tem alguma crítica? Sugestão? Deixe um comentário ;)</p>
+<p>Até a próxima aventura =)</p>
+<p><img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Alt Text"></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/dplyr/">dplyr</a>
+  
+  <a class="badge badge-light" href="/tags/r/">r</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Gustavo B Paterno</a></h5>
+    <h6 class="card-subtitle">Postdoctoral researcher</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/paternogb" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.com/citations?user=uNxyHMkAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/paternogbc" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://www.researchgate.net/profile/Gustavo_Paterno2" target="_blank" rel="noopener">
+          <i class="ai ai-researchgate"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/como-selecionar-colunas-de-uma-tabela-no-r/">Como selecionar colunas de uma tabela no R?</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gustavopaterno" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    © Gustavo Paterno 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//gustavopaterno.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.5752a62e7c04993e8f13fbc193e7a138.js"></script>
+
+    
+
+  </body>
+</html>
+

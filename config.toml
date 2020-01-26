@@ -13,7 +13,7 @@ title = "Gustavo Paterno"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; Gustavo Paterno 2018"
+copyright = "&copy; Gustavo Paterno 2020"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -57,7 +57,7 @@ enableGitInfo = false
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "UFJF", url = "" } ]
+  organizations = [ { name = "UFRN", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
@@ -329,11 +329,6 @@ enableGitInfo = false
   name = "Contact"
   url = "#contact"
   weight = 9
-
-[[menu.main]]
-  name = "R Aprendiz"
-  url = "aprendiz"
-  weight = 7
 
 #[[menu.main]]
 #  name = "Tutoriais"

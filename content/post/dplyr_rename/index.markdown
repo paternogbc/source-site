@@ -157,4 +157,4 @@ Tem alguma crítica? Sugestão? Deixe um comentário ;)
 
 Até a próxima aventura =)
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)

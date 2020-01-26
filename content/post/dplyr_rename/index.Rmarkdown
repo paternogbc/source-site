@@ -14,7 +14,6 @@ tags:
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, eval = TRUE)
 library(kableExtra)
 library(tidyverse)
-library(emo)
 ```
 
 # O pacote `dplyr`
@@ -93,4 +92,4 @@ Tem alguma crítica? Sugestão? Deixe um comentário ;)
 
 Até a próxima aventura =)
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
